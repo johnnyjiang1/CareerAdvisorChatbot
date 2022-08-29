@@ -113,6 +113,7 @@ def output_postprocess(output):
     answer = ""
     if best_match.answer == "No answer found":
         answer = "Sorry, I didn't find the answer to your question."
+        return answer
     else:
         try:
             answer = qa_database[best_match.answer]
